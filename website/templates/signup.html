@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block title %} Sign-Up {% endblock title %} {%
+block content %}
+
+<div class="mt-5 w-50 container">
+  <h1>Sign-Up </h1>
+  <form method="POST">
+
+    <div class="form-floating mb-3 mt-4">
+      <input type="email" class="form-control" id="floatingInput" name="email" autocomplete="off"
+        placeholder="name@example.com" />
+      <label for="floatingInput"> <i class="bi bi-envelope-fill"></i> Email address</label>
+    </div>
+
+    <div class="form-floating mb-3 mt-4">
+      <input type="text" class="form-control" id="floatingName" name="name" autocomplete="off" placeholder="Name" />
+      <label for="floatingInput"> <i class="bi bi-person-fill"></i> Name</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password" />
+      <label for="floatingPassword"> <i class="bi bi-key-fill"></i> Password</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="floatingPassword2" name="password2"
+        placeholder="Confirm - Password" />
+      <label for="floatingPassword"> <i class="bi bi-lock-fill"></i> Confirm Password</label>
+    </div>
+
+    <button class="btn btn-primary" type="submit"> <i class="bi bi-person-plus-fill"></i> Signup</button>
+
+  </form>
+</div>
+
+{% endblock content %}

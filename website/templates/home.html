@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+
+<div class="container w-25">
+
+
+   {% for note in current_user.notes %}
+   <div class="container border border-primary mt-1 p-3">
+      <div class="title ">
+         <a href="/delete-note/{{note.id}}" style="float: right;" class="btn-close" aria-label="Close"></a>
+         <span>{{note.date}}</span>
+      </div>
+      <hr>
+      <p class="text-break">{{note.data}}</p>
+   </div>
+   {% endfor %}
+
+
+</div>
+
+<form method="POST">
+   <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="note"></textarea>
+   </div>
+   <button class="btn btn-primary" type="submit"> <i class="bi bi-plus-lg"></i> Insert </button>
+</form>
+{% endblock content %}
